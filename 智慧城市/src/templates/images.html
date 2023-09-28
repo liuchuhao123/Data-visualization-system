@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>地铁图片展示</title>
+    <style>
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .image{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>相关数据展示</h1>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='上海各线路站点数量的分布趋势.png') }}"
+             alt="上海各线路站点数量的分布趋势.png">
+        <img src="{{ url_for('static', filename='全国各城市总的换乘站点数量（2换乘、3换乘、4换乘等）分布统计.png') }}"
+             alt="全国各城市总的换乘站点数量（2换乘、3换乘、4换乘等）分布统计.png">
+        <img src="{{ url_for('static', filename='分析各个城市的大学数量与站点数量的关系.png') }}"
+             alt="分析各个城市的大学数量与站点数量的关系.png">
+        <img src="{{ url_for('static', filename='北京各线路站点数量的分布趋势.png') }}"
+             alt="北京各线路站点数量的分布趋势.png">
+        <img src="{{ url_for('static', filename='各个城市的大学数量与站点数量的关系.png') }}"
+             alt="各个城市的大学数量与站点数量的关系.png">
+        <img src="{{ url_for('static', filename='各个城市的站点数量的饼状图分布(25个城市).png') }}"
+             alt="各个城市的站点数量的饼状图分布(25个城市).png">
+        <img src="{{ url_for('static', filename='各个城市的线路数量的饼状图分布（25个城市）.png') }}"
+             alt="各个城市的线路数量的饼状图分布（25个城市）.png">
+        <img src="{{ url_for('static', filename='各城市各线路的站点数量前10的变化.png') }}"
+             alt="各城市各线路的站点数量前10的变化.png">
+        <img src="{{ url_for('static', filename='名字中带有大学的地铁站的城市数量分布.png') }}"
+             alt="名字中带有大学的地铁站的城市数量分布.png">
+        <img src="{{ url_for('static', filename='哈尔滨各线路站点数量的分布趋势.png') }}"
+             alt="哈尔滨各线路站点数量的分布趋势.png">
+        <img src="{{ url_for('static', filename='地铁名词云.jpg') }}" alt="地铁名词云.jpg">
+        <img src="{{ url_for('static', filename='天津各线路站点数量的分布趋势.png') }}"
+             alt="天津各线路站点数量的分布趋势.png">
+        <img src="{{ url_for('static', filename='广州、天津、武汉、重庆同名的线路1-线路6的站点数量分布.png') }}"
+             alt="广州、天津、武汉、重庆同名的线路1-线路6的站点数量分布.png">
+        <img src="{{ url_for('static', filename='武汉各线路站点数量的分布趋势.png') }}"
+             alt="武汉各线路站点数量的分布趋势.png">
+        <img src="{{ url_for('static', filename='各个城市地铁线路的最大站点数.png') }}"
+             alt="各个城市地铁线路的最大站点数.png">
+        <img src="{{ url_for('static', filename='郑州、武汉、广州、长沙同名的线路1-线路6的站点数量分布.png') }}"
+             alt="郑州、武汉、广州、长沙同名的线路1-线路6的站点数量分布.png">
+    </div>
+</body>
+</html>

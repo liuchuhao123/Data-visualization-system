@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>地铁信息查询</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='bg.png') }}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+        .results {
+            flex: 1;
+            margin-right: 20px;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .button-container {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+        }
+        .button-container button {
+            margin-bottom: 10px;
+        }
+        .search-form {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+        }
+        .search-form input[type="text"],
+        .search-form button {
+            margin-right: 10px;
+        }
+        #corner-image {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 9999;
+            width: 220px;
+            height: 220px;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+    <h1>地铁信息查询</h1>
+    <div class="search-form">
+        <form method="POST" action="/">
+            <input type="text" name="search_text" placeholder="输入城市和线路，用逗号分隔">
+            <button type="submit">查线路</button>
+        </form>
+        <form method="POST" action="/search_station">
+            <input type="text" name="search_text" placeholder="输入站点名称">
+            <button type="submit">查站点</button>
+        </form>
+    </div>
+    <br>
+    <div class="container">
+        <div class="results">
+            <h2>查询结果:</h2>
+            <ul>
+                {% for item in infomation %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="button-container">
+        <button onclick="window.location.href='/open_html/中国地铁站最爱用的字'">中国地铁站最爱用的字</button>
+        <button onclick="window.location.href='/open_html/各城市地铁数量分布'">各城市地铁数量分布</button>
+        <button onclick="window.location.href='/open_html/地铁站最爱用门命名的城市'">地铁站最爱用门命名的城市</button>
+        <button onclick="window.location.href='/open_html/已开通地铁城市分布情况'">已开通地铁城市分布情况</button>
+        <button onclick="window.open('/images')">相关数据展示</button>
+    </div>
+
+    <img id="corner-image" src="{{ url_for('static', filename='cug.png') }}" alt="Corner Image">
+</body>
+</html>
